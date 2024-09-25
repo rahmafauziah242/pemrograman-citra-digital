@@ -23,6 +23,7 @@
 # Halftoning
 
 Halftoning adalah sebuah teknik yang digunakan untuk memproduksi gambar dengan warna abu-abu atau warna yang lebih sedikit menggunakan hanya dua warna (hitam dan putih). Teknik ini biasanya digunakan dalam pencetakan, fotografi digital, dan pengiriman data gambar. Teknik ini digunakan dalam printer, serta industri penerbitan. Jika Anda memeriksa sebuah foto di koran, Anda akan melihat bahwa gambar itu terdiri dari titik-titik hitam meskipun tampaknya terdiri dari abu-abu. Hal ini dimungkinkan karena integrasi spasial yang dilakukan oleh mata kita. Mata kita memadukan detail halus dan merekam intensitas keseluruhan. Semakin banyak jumlah titik hitam dalam sel halftone, semakin gelap sel tersebut tampak. Contohnya, pada Gambar 4, titik kecil yang terletak di bagian tengah disimulasikan dalam halftoning digital dengan mengisi sel halftone bagian tengah; demikian juga, titik ukuran sedang yang terletak di sudut kiri atas, disimulasikan dengan mengisi empat sel di sudut kiri atas. Titik besar yang mencakup sebagian besar area pada gambar ketiga disimulasikan dengan mengisi semua sel halftone.
+
 <img src="Contohhalftoningdigital.png"/>
 
 **Ada dua metode utama dalam halftoning:**

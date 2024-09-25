@@ -34,11 +34,15 @@ Halftoning adalah sebuah teknik yang digunakan untuk memproduksi gambar dengan w
 
 Patterning adalah teknik halftoning yang menggunakan pola khusus (seperti titik, garis, atau bentuk lain) untuk menciptakan kesan warna abu-abu. patterning dikenal sebagai pola melibatkan penggantian setiap pixel dengan pola yang diambil dari font binner. Patterning merupakan salah satu teknik sederhana untuk mendigitalisasi halftoning dengan merubah ukuran pixelnya. Misal yang awalnya berukuran 2x2, maka ketika dilakukan patterning ukurannya jadi berubah dimana setiap 1 pixel menjadi ukuran 2x2, maka ukuran akhirnya yang awalnya 2x2 menjadi 6x6.
 Jika terdapat font binner 4x4, maka banyaknya pola yang didapat adalah (4x4)+1 = 17. Artinya, untuk pola paterning 4x4 ada sebanyak 17 pola yang berbeda. batas tiap pola dapat kita hitung dengan cara jumlah warna dibagi banyaknya pola = 256 / 17 = 15,05, kita bulatkan menjadi 15 (256 di dapat pada ukuran gambar 8 bit atau 8 pangkat 2 = 256 warna). Artinya, setiap pola memiliki rentang 15 angka yang dimulai dari angka 0.
+
 <img src="patterning4x4 .png"/>
+
 <img src="caraoperasipatterning.png">
+
 Pada bagian ini, proses pengisian pola dijelaskan. Gambar sebelah kiri menunjukkan gambar yang sudah diubah ke dalam bentuk angka yang ada di dalam kotak. Di mana setiap angka mewakili tingkat kegelapan pada bagian tertentu dari gambar asli. Angka-angka ini digunakan sebagai petunjuk untuk memilih atau mencocokan pola yang tepat dari matriks pola di sebelah kanan. Pola yang dipilih kemudian digunakan untuk menggantikan bagian gambar sesuai dengan tingkat kegelapan yang diinginkan, menghasilkan gambar akhir yang terdiri dari titik-titik kecil yang menciptakan efek gradasi.
 
 Gambar patterning:
+
 <img src="pattering.png" style="width:40%">
 
 pseudocodenya:
@@ -62,7 +66,9 @@ pseudocodenya:
 ---
 
 Teknik lain yang digunakan untuk menghasilkan gambar halftoning digital adalah dithering. Tidak seperti patterning, dithering menciptakan gambar output dengan jumlah titik yang sama dengan jumlah piksel dalam gambar sumber. Dithering dapat dianggap sebagai thresholding gambar sumber dengan matriks dither. Matriks diletakkan berulang kali di atas gambar sumber. Di mana pun nilai piksel gambar lebih besar daripada nilai dalam matriks, titik pada gambar output akan terisi. Masalah yang terkenal dari dithering adalah menghasilkan artefak pola yang diperkenalkan oleh matriks thresholding yang tetap. Gambar di bawah ini menunjukkan contoh operasi dithering.
+
 <img src="operasidithering.png" style="width:50%">
+
 Gambar ini menunjukkan proses dithering untuk menghasilkan gambar akhir yang terdiri dari titik-titik hitam dan putih.
 
 - Input Image:
@@ -124,6 +130,7 @@ Nilai piksel putih = 1, Nilai piksel hitam = 0
 Jika nilai piksel > threshold, maka hasilnya putih (1) dan Jika nilai piksel ≤ threshold, maka hasilnya hitam (0)
 
 hasil gambar dari dithering:
+
 <img src="hasildithering.png" style="width:50%">
 
 pseudocodenya:

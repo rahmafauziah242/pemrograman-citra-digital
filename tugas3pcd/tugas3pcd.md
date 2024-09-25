@@ -29,9 +29,6 @@ Halftoning adalah sebuah teknik yang digunakan untuk memproduksi gambar dengan w
 **Ada dua metode utama dalam halftoning:**
 
 # 1. Patterning
-
----
-
 Patterning adalah teknik halftoning yang menggunakan pola khusus (seperti titik, garis, atau bentuk lain) untuk menciptakan kesan warna abu-abu. patterning dikenal sebagai pola melibatkan penggantian setiap pixel dengan pola yang diambil dari font binner. Patterning merupakan salah satu teknik sederhana untuk mendigitalisasi halftoning dengan merubah ukuran pixelnya. Misal yang awalnya berukuran 2x2, maka ketika dilakukan patterning ukurannya jadi berubah dimana setiap 1 pixel menjadi ukuran 2x2, maka ukuran akhirnya yang awalnya 2x2 menjadi 6x6.
 Jika terdapat font binner 4x4, maka banyaknya pola yang didapat adalah (4x4)+1 = 17. Artinya, untuk pola paterning 4x4 ada sebanyak 17 pola yang berbeda. batas tiap pola dapat kita hitung dengan cara jumlah warna dibagi banyaknya pola = 256 / 17 = 15,05, kita bulatkan menjadi 15 (256 di dapat pada ukuran gambar 8 bit atau 8 pangkat 2 = 256 warna). Artinya, setiap pola memiliki rentang 15 angka yang dimulai dari angka 0.
 
@@ -62,9 +59,6 @@ pseudocodenya:
 7. Tampilkan gambar hasil patterning dengan fungsi imshow dan beri judul 'Patterning'
 
 # 2. Dithering
-
----
-
 Teknik lain yang digunakan untuk menghasilkan gambar halftoning digital adalah dithering. Tidak seperti patterning, dithering menciptakan gambar output dengan jumlah titik yang sama dengan jumlah piksel dalam gambar sumber. Dithering dapat dianggap sebagai thresholding gambar sumber dengan matriks dither. Matriks diletakkan berulang kali di atas gambar sumber. Di mana pun nilai piksel gambar lebih besar daripada nilai dalam matriks, titik pada gambar output akan terisi. Masalah yang terkenal dari dithering adalah menghasilkan artefak pola yang diperkenalkan oleh matriks thresholding yang tetap. Gambar di bawah ini menunjukkan contoh operasi dithering.
 
 <img src="operasidithering.png" style="width:50%">
